@@ -14,5 +14,10 @@ export class App {
 
   btnClick() {
     alert('Button clicked!');
+    this.otherFunc();
+  }
+
+  otherFunc() {
+    alert('Other function called!');
   }
 }
