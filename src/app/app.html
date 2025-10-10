@@ -1,9 +1,21 @@
-<h1>Profile Component</h1>
+<!-- <h1>App Component</h1>
 <app-login></app-login>
 <app-signup></app-signup>
-<app-profile></app-profile>
+<app-profile></app-profile> -->
 
-<button (click)="btnClick()">Click Me</button>
+<!-- <button (click)="btnClick()">Click Me</button>
 <button (click)="updateName()">Update Name</button>
 <button (click)="updateVar()">Update Var</button>
-<button (click)="sum(10, 25)">Sum</button>
+<button (click)="sum(10, 25)">Sum</button> -->
+
+<h1>Events in Angular</h1>
+<button (click)="btnClick($event)" class="btn" name="btn-click">Click Me(Click Event)</button>
+
+<br><br>
+<div (mouseup)="btnClick($event)" style="background: #323232; border-radius:10px; height: 100px; width: 100px;"></div>
+<div (mousedown)="btnClick($event)" style="background: #000; border-radius:10px; height: 100px; width: 100px;"></div>
+<div (mouseover)="btnClick($event)" style="background: #9f6f6f; border-radius:10px; height: 100px; width: 100px;"></div>
+<div (mouseenter)="btnClick($event)" style="background: #e76161; border-radius:10px; height: 100px; width: 100px;"></div>
+<div (mouseleave)="btnClick($event)" style="background: #000; border-radius:10px; height: 100px; width: 100px;"></div>
+<div (mousemove)="btnClick($event)" style="background: #000; border-radius:10px; height: 100px; width: 100px;"></div>
+<div (mousewheel)="btnClick($event)" style="background: #000; border-radius:10px; height: 100px; width: 100px;"></div>

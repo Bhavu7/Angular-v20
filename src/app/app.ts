@@ -13,14 +13,17 @@ export class App {
   protected readonly title = signal('angular-demo');
 
   // calling another function from function
-  btnClick() {
-    alert('Button clicked!');
-    this.otherFunc();
+  btnClick(event: MouseEvent) {
+    // alert('Button clicked!');
+    console.log('Button Clicked By User.',event.type);
+    console.log('Button Clicked By User.',(event.target as Element).className);
+
+    // this.otherFunc();
   }
 
-  otherFunc() {
-    alert('Other function called!');
-  }
+  // otherFunc() {
+  //   alert('Other function called!');
+  // }
 
   // define types
   // var_name:datatype=value
