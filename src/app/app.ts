@@ -30,7 +30,9 @@ export class App {
   age: String | number = 21
 
   // String & Boolean
-  other: String | Boolean | Number = true
+  other: String | Boolean | number = true
+
+  // For All Datatypes - any
 
   updateName() {
     this.name = "Bhavu"
@@ -45,5 +47,24 @@ export class App {
     this.other = false
     this.other = "Bhavu"
     this.other = 21
+
+    console.log(this.name);
+    console.log(this.age);
+    console.log(this.other);
+    this.updateVar();
+  }
+
+  updateVar() {
+    let a = 20;
+    let b:number | Boolean = 10;
+
+    console.log(a);
+    console.log(b);
+
+    this.sum(7, 3);
+  }
+
+  sum(a:number, b:number) {
+    console.log(a + b);
   }
 }
