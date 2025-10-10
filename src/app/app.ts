@@ -11,4 +11,8 @@ import { Profile } from './profile/profile.component';
 })
 export class App {
   protected readonly title = signal('angular-demo');
+
+  btnClick() {
+    alert('Button clicked!');
+  }
 }
