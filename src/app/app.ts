@@ -10,64 +10,72 @@ import { Profile } from './profile/profile.component';
   styleUrl: './app.css'
 })
 export class App {
-  protected readonly title = signal('angular-demo');
+  // protected readonly title = signal('angular-demo');
 
-  // calling another function from function
-  btnClick(event: MouseEvent) {
-    // alert('Button clicked!');
-    console.log('Button Clicked By User.',event.type);
-    console.log('Button Clicked By User.',(event.target as Element).className);
+  // // calling another function from function
+  // btnClick(event: MouseEvent) {
+  //   // alert('Button clicked!');
+  //   console.log('Button Clicked By User.',event.type);
+  //   console.log('Button Clicked By User.',(event.target as Element).className);
 
-    // this.otherFunc();
-  }
-
-  // otherFunc() {
-  //   alert('Other function called!');
+  //   // this.otherFunc();
   // }
 
-  // define types
-  // var_name:datatype=value
-  name: String = "Bhavesh Bhoi"
+  // // otherFunc() {
+  // //   alert('Other function called!');
+  // // }
 
-  // Assign Multiple Data Types
-  age: String | number = 21
+  // // define types
+  // // var_name:datatype=value
+  // name: String = "Bhavesh Bhoi"
 
-  // String & Boolean
-  other: String | Boolean | number = true
+  // // Assign Multiple Data Types
+  // age: String | number = 21
 
-  // For All Datatypes - any
+  // // String & Boolean
+  // other: String | Boolean | number = true
 
-  updateName() {
-    this.name = "Bhavu"
-    // this.name = 21 // error
+  // // For All Datatypes - any
 
-    // Assign Multiple Data Types
-    this.age = 22
-    this.age = "Bhavu"
+  // updateName() {
+  //   this.name = "Bhavu"
+  //   // this.name = 21 // error
 
-    // Boolean
-    this.other = true
-    this.other = false
-    this.other = "Bhavu"
-    this.other = 21
+  //   // Assign Multiple Data Types
+  //   this.age = 22
+  //   this.age = "Bhavu"
 
-    console.log(this.name);
-    console.log(this.age);
-    console.log(this.other);
-    this.updateVar();
-  }
+  //   // Boolean
+  //   this.other = true
+  //   this.other = false
+  //   this.other = "Bhavu"
+  //   this.other = 21
 
-  updateVar() {
-    let a = 20;
-    let b:number | Boolean = 10;
+  //   console.log(this.name);
+  //   console.log(this.age);
+  //   console.log(this.other);
+  //   this.updateVar();
+  // }
 
-    console.log(a);
-    console.log(b);
+  // updateVar() {
+  //   let a = 20;
+  //   let b:number | Boolean = 10;
 
-    this.sum(7, 3);
-  }
+  //   console.log(a);
+  //   console.log(b);
 
-  sum(a:number, b:number) {
-    console.log(a + b);
+  //   this.sum(7, 3);
+  // }
+
+  // sum(a:number, b:number) {
+  //   console.log(a + b);
+  // }
+
+  name = "";
+  getName(event: Event){
+    // this.name = "Bhavesh Bhoi"
+    const name = (event.target as HTMLInputElement).value;
+    // console.log(name);
+    this.name = name;
   }
 }
