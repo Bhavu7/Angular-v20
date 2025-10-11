@@ -21,10 +21,17 @@
 <!-- <div (mousewheel)="btnClick($event)" style="background: #000; border-radius:10px; height: 100px; width: 100px;"></div> -->
 
 <h1>Get & Set Input Field Value in Angular</h1>
-<input type="text" (input)="getName($event)" name="getInput" title="getInput" placeholder="Enter Username">
+<input type="text" value="{{name}}" (input)="getName($event)" name="getInput" title="getInput" placeholder="Enter Username">
 <br>
 <br>
-<button>Get Value</button>
+<button (click)="showName()">Get Name</button>
+<button (click)="setName()">Set Name</button>
 <br>
 <br>
-<h3>Username is : {{name}}</h3>
+<h3>Username is : {{dispName}}</h3>
+<br>
+<br>
+<h1>Email : {{email}}</h1>
+<input type="email" name="email" placeholder="Enter Email" #emailField>
+<button (click)="getEmail(emailField.value)">Get Email</button>
+<button (click)="setEmail()">Set Email</button>

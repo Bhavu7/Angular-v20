@@ -72,10 +72,31 @@ export class App {
   // }
 
   name = "";
-  getName(event: Event){
+  dispName = "";
+  email = "";
+  getName(event: Event) {
     // this.name = "Bhavesh Bhoi"
-    const name = (event.target as HTMLInputElement).value;
+    // const name = (event.target as HTMLInputElement).value;
+
+    this.name = (event.target as HTMLInputElement).value;
     // console.log(name);
-    this.name = name;
+    // this.name = name;
+  }
+
+  showName(){
+    this.dispName = this.name;
+  }
+
+  setName(){
+    this.name = "Bhavesh Bhoi";
+  }
+
+  getEmail(val: string){
+    console.log(val);
+    this.email = val;
+  }
+
+  setEmail(){
+    this.email = "bhavubhoi@swiftlist.io";
   }
 }
