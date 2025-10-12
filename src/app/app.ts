@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import { Component, effect, signal } from '@angular/core';
 import { Login } from './login/login';
 import { Signup } from './signup/signup';
 import { Profile } from './profile/profile.component';
@@ -139,39 +139,60 @@ export class App {
   //   this.color = (event.target as HTMLInputElement).value;
   // }
 
-  users = ['amit', 'het', 'dev', 'ajay', 'deep'];
-  students = [
-    {
-      id: 1,
-      name: 'Bhavu',
-      age: 21,
-      email: 'bhavu@test.com',
-      prof: 'Developer'
-    },
-    {
-      id: 2,
-      name: 'Het',
-      age: 32,
-      email: 'het@test.com',
-      prof: 'Invester'
-    },
-    {
-      id: 3,
-      name: 'meet',
-      age: 28,
-      email: 'meet@test.com',
-      prof: 'SDE'
-    },
-    {
-      id: 4,
-      name: 'dev',
-      age: 25,
-      email: 'dev@test.com',
-      prof: 'Engineer'
-    }
-  ]
+  // users = ['amit', 'het', 'dev', 'ajay', 'deep'];
+  // students = [
+  //   {
+  //     id: 1,
+  //     name: 'Bhavu',
+  //     age: 21,
+  //     email: 'bhavu@test.com',
+  //     prof: 'Developer'
+  //   },
+  //   {
+  //     id: 2,
+  //     name: 'Het',
+  //     age: 32,
+  //     email: 'het@test.com',
+  //     prof: 'Invester'
+  //   },
+  //   {
+  //     id: 3,
+  //     name: 'meet',
+  //     age: 28,
+  //     email: 'meet@test.com',
+  //     prof: 'SDE'
+  //   },
+  //   {
+  //     id: 4,
+  //     name: 'dev',
+  //     age: 25,
+  //     email: 'dev@test.com',
+  //     prof: 'Engineer'
+  //   }
+  // ]
 
-  getName(name : string){
-    console.log(name);
+  // getName(name : string){
+  //   console.log(name);
+  // }
+
+  count = signal(10);
+  x = 20;
+
+  constructor() {
+    effect(() => {
+      console.log(this.count());
+
+    })
+  }
+
+  updateValue(val: string) {
+    // this.count.set(300);
+    // this.x = this.x+1;
+
+    if (val == 'inc') {
+      this.count.set(this.count() + 1);
+    } else {
+      this.count.set(this.count() - 1);
+    }
   }
 }

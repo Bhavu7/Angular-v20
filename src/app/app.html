@@ -101,7 +101,7 @@
   }
 } -->
 
-<h1>Arrays in Angular</h1>
+<!-- <h1>Arrays in Angular</h1>
 <hr />
 <br />
 <h3>{{ users }}</h3>
@@ -136,4 +136,16 @@
     <button (click)="getName(student.name)">Get Name</button>
   </span>
 </h3>
-}
+} -->
+
+<h1>Basics of Signal</h1>
+
+<!-- <h3>{{count()}}</h3>
+<h3>{{x}}</h3>
+
+<button (click)="count.set(100)">Increase Signal</button>
+<button (click)="updateValue()">update value</button> -->
+
+<button (click)="updateValue('dec')">Decrement</button>
+<h3>{{ count() }}</h3>
+<button (click)="updateValue('inc')">Increment</button>
