@@ -100,22 +100,32 @@ export class App {
   //   this.email = "bhavubhoi@swiftlist.io";
   // }
 
-  display = true;
-  toggle = true;
+  // display = true;
+  // toggle = true;
 
-  hideBox(){
-    this.display = false;
+  // hideBox(){
+  //   this.display = false;
+  // }
+
+  // showBox(){
+  //   this.display = true;
+  // }
+
+  // toggleBox(){
+  //   this.display = !this.display;
+  // }
+
+  // toggleBoxes(){
+  //   this.toggle = !this.toggle;
+  // }
+
+  color = 1
+
+  handleColor(value : number){
+    this.color = value;
   }
 
-  showBox(){
-    this.display = true;
-  }
-
-  toggleBox(){
-    this.display = !this.display;
-  }
-
-  toggleBoxes(){
-    this.toggle = !this.toggle;
+  handleInput(event : Event){
+    this.color = parseInt((event.target as HTMLInputElement).value);
   }
 }
