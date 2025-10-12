@@ -54,7 +54,7 @@
 @else{
   <div class="box2" style="background-color: red;"></div>
 } -->
-<button (click)="handleColor(1)">Red</button>
+<!-- <button (click)="handleColor(1)">Red</button>
 <button (click)="handleColor(2)">Yellow</button>
 <button (click)="handleColor(3)">Green</button>
 <button (click)="handleColor(4)">Blue</button>
@@ -73,4 +73,30 @@
   } @else {
   <div class="box"></div>
   }
-</div>
+</div> -->
+
+<button (click)="handleColor('red')">Red</button>
+<button (click)="handleColor('green')">Green</button>
+<button (click)="handleColor('blue')">Blue</button>
+<button (click)="handleColor('yellow')">Yellow</button>
+<button (click)="handleColor('other')">Reset</button>
+<br>
+<input type="text" (input)="changeColor($event)" name="text" id="text" placeholder="Enter color" />
+
+@switch (color) {
+  @case ('red') {
+    <h1 style="background-color: red;">Red Color</h1>
+  }
+  @case ('green') {
+    <h1 style="background-color: green;">Green Color</h1>
+  }
+  @case ('blue') {
+    <h1 style="background-color: blue;">Blue Color</h1>
+  }
+  @case ('yellow') {
+    <h1 style="background-color: yellow;">Yellow Color</h1>
+  }
+  @default {
+    <h1 style="background-color: rgb(255, 255, 255);">Default Color</h1>
+  }
+}

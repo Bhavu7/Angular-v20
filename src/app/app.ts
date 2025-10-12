@@ -119,13 +119,23 @@ export class App {
   //   this.toggle = !this.toggle;
   // }
 
-  color = 1
+  // color = 0
 
-  handleColor(value : number){
-    this.color = value;
+  // handleColor(value : number){
+  //   this.color = value;
+  // }
+
+  // handleInput(event : Event){
+  //   this.color = parseInt((event.target as HTMLInputElement).value);
+  // }
+
+  color = 'other';
+
+  handleColor(val : string){
+    this.color = val;
   }
 
-  handleInput(event : Event){
-    this.color = parseInt((event.target as HTMLInputElement).value);
+  changeColor(event : Event){
+    this.color = (event.target as HTMLInputElement).value;
   }
 }
