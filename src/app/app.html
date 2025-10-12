@@ -75,7 +75,7 @@
   }
 </div> -->
 
-<button (click)="handleColor('red')">Red</button>
+<!-- <button (click)="handleColor('red')">Red</button>
 <button (click)="handleColor('green')">Green</button>
 <button (click)="handleColor('blue')">Blue</button>
 <button (click)="handleColor('yellow')">Yellow</button>
@@ -99,4 +99,41 @@
   @default {
     <h1 style="background-color: rgb(255, 255, 255);">Default Color</h1>
   }
+} -->
+
+<h1>Arrays in Angular</h1>
+<hr />
+<br />
+<h3>{{ users }}</h3>
+<h3>{{ users[1] }}</h3>
+
+<hr />
+
+@for(user of users; track user){
+<h2>{{ user }}</h2>
+}
+
+<hr />
+<br />
+@for(student of students; track student.name; let id = $index){
+<h3>
+  <span>
+    {{ id + 1 }} </span
+  >/
+  <span>
+    {{ student.name }} </span
+  >/
+  <span>
+    {{ student.age }} </span
+  >/
+  <span>
+    {{ student.email }} </span
+  >/
+  <span>
+    {{ student.prof }} </span
+  >/
+  <span>
+    <button (click)="getName(student.name)">Get Name</button>
+  </span>
+</h3>
 }

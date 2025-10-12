@@ -129,13 +129,49 @@ export class App {
   //   this.color = parseInt((event.target as HTMLInputElement).value);
   // }
 
-  color = 'other';
+  // color = 'other';
 
-  handleColor(val : string){
-    this.color = val;
-  }
+  // handleColor(val : string){
+  //   this.color = val;
+  // }
 
-  changeColor(event : Event){
-    this.color = (event.target as HTMLInputElement).value;
+  // changeColor(event : Event){
+  //   this.color = (event.target as HTMLInputElement).value;
+  // }
+
+  users = ['amit', 'het', 'dev', 'ajay', 'deep'];
+  students = [
+    {
+      id: 1,
+      name: 'Bhavu',
+      age: 21,
+      email: 'bhavu@test.com',
+      prof: 'Developer'
+    },
+    {
+      id: 2,
+      name: 'Het',
+      age: 32,
+      email: 'het@test.com',
+      prof: 'Invester'
+    },
+    {
+      id: 3,
+      name: 'meet',
+      age: 28,
+      email: 'meet@test.com',
+      prof: 'SDE'
+    },
+    {
+      id: 4,
+      name: 'dev',
+      age: 25,
+      email: 'dev@test.com',
+      prof: 'Engineer'
+    }
+  ]
+
+  getName(name : string){
+    console.log(name);
   }
 }
