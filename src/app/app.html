@@ -20,7 +20,7 @@
 <div (mousemove)="btnClick($event)"></div> -->
 <!-- <div (mousewheel)="btnClick($event)" style="background: #000; border-radius:10px; height: 100px; width: 100px;"></div> -->
 
-<h1>Get & Set Input Field Value in Angular</h1>
+<!-- <h1>Get & Set Input Field Value in Angular</h1>
 <input type="text" value="{{name}}" (input)="getName($event)" name="getInput" title="getInput" placeholder="Enter Username">
 <br>
 <br>
@@ -34,4 +34,24 @@
 <h1>Email : {{email}}</h1>
 <input type="email" name="email" placeholder="Enter Email" #emailField>
 <button (click)="getEmail(emailField.value)">Get Email</button>
-<button (click)="setEmail()">Set Email</button>
+<button (click)="setEmail()">Set Email</button> -->
+
+
+<h1>If Else | Control Flow</h1>
+<button (click)="hideBox()">Hide Box</button>
+<button (click)="showBox()">Show Box</button>
+<button (click)="toggleBox()">Toggle Box</button>
+@if(display){
+  <div class="box"></div>
+}
+
+<hr>
+
+<button (click)="toggleBoxes()">{{toggle?'Hide Box':'Show Box'}}</button>
+
+@if(toggle){
+  <div class="box2"></div>
+}
+@else{
+  <div class="box2" style="background-color: red;"></div>
+}

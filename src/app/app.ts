@@ -5,7 +5,7 @@ import { Profile } from './profile/profile.component';
 
 @Component({
   selector: 'app-root',
-  imports: [Login, Signup, Profile],
+  // imports: [Login, Signup, Profile],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
@@ -71,32 +71,51 @@ export class App {
   //   console.log(a + b);
   // }
 
-  name = "";
-  dispName = "";
-  email = "";
-  getName(event: Event) {
-    // this.name = "Bhavesh Bhoi"
-    // const name = (event.target as HTMLInputElement).value;
+  // name = "";
+  // dispName = "";
+  // email = "";
+  // getName(event: Event) {
+  //   // this.name = "Bhavesh Bhoi"
+  //   // const name = (event.target as HTMLInputElement).value;
 
-    this.name = (event.target as HTMLInputElement).value;
-    // console.log(name);
-    // this.name = name;
+  //   this.name = (event.target as HTMLInputElement).value;
+  //   // console.log(name);
+  //   // this.name = name;
+  // }
+
+  // showName(){
+  //   this.dispName = this.name;
+  // }
+
+  // setName(){
+  //   this.name = "Bhavesh Bhoi";
+  // }
+
+  // getEmail(val: string){
+  //   console.log(val);
+  //   this.email = val;
+  // }
+
+  // setEmail(){
+  //   this.email = "bhavubhoi@swiftlist.io";
+  // }
+
+  display = true;
+  toggle = true;
+
+  hideBox(){
+    this.display = false;
   }
 
-  showName(){
-    this.dispName = this.name;
+  showBox(){
+    this.display = true;
   }
 
-  setName(){
-    this.name = "Bhavesh Bhoi";
+  toggleBox(){
+    this.display = !this.display;
   }
 
-  getEmail(val: string){
-    console.log(val);
-    this.email = val;
-  }
-
-  setEmail(){
-    this.email = "bhavubhoi@swiftlist.io";
+  toggleBoxes(){
+    this.toggle = !this.toggle;
   }
 }
