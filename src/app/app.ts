@@ -196,12 +196,22 @@ export class App {
   //   }
   // }
 
-  // data : WritableSignal<string | number> = signal<number | string>(10);
-  data : WritableSignal<number> = signal<number>(10);
-  // count:Signal <number> = computed(() => 100);
+  // // data : WritableSignal<string | number> = signal<number | string>(10);
+  // data : WritableSignal<number> = signal<number>(10);
+  // // count:Signal <number> = computed(() => 100);
 
-  updateSignal(){
-    // this.data.set("Hey");
-    this.data.update((val) => val+1);
+  // updateSignal(){
+  //   // this.data.set("Hey");
+  //   this.data.update((val) => val+1);
+  // }
+
+  x = signal(10);
+  y = signal(20);
+  z = computed(() => this.x() + this.y());
+
+  showValue(){
+    console.log(this.z());
+    this.x.set(100);
+    console.log(this.z());
   }
 }
