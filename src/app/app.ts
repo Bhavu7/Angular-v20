@@ -1,4 +1,4 @@
-import { Component, effect, signal } from '@angular/core';
+import { Component, effect, signal, WritableSignal, Signal, computed } from '@angular/core';
 import { Login } from './login/login';
 import { Signup } from './signup/signup';
 import { Profile } from './profile/profile.component';
@@ -175,24 +175,33 @@ export class App {
   //   console.log(name);
   // }
 
-  count = signal(10);
-  x = 20;
+  // count = signal(10);
+  // x = 20;
 
-  constructor() {
-    effect(() => {
-      console.log(this.count());
+  // constructor() {
+  //   effect(() => {
+  //     console.log(this.count());
 
-    })
-  }
+  //   })
+  // }
 
-  updateValue(val: string) {
-    // this.count.set(300);
-    // this.x = this.x+1;
+  // updateValue(val: string) {
+  //   // this.count.set(300);
+  //   // this.x = this.x+1;
 
-    if (val == 'inc') {
-      this.count.set(this.count() + 1);
-    } else {
-      this.count.set(this.count() - 1);
-    }
+  //   if (val == 'inc') {
+  //     this.count.set(this.count() + 1);
+  //   } else {
+  //     this.count.set(this.count() - 1);
+  //   }
+  // }
+
+  // data : WritableSignal<string | number> = signal<number | string>(10);
+  data : WritableSignal<number> = signal<number>(10);
+  // count:Signal <number> = computed(() => 100);
+
+  updateSignal(){
+    // this.data.set("Hey");
+    this.data.update((val) => val+1);
   }
 }
