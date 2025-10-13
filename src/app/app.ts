@@ -211,6 +211,9 @@ export class App {
 
   showValue(){
     console.log(this.z());
+  }
+
+  updateValue(){
     this.x.set(100);
     console.log(this.z());
   }
