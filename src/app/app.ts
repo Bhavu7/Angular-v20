@@ -271,4 +271,8 @@ export class App {
   bgColor = "green";
   // fontSize = "3rem";
   fontSize = "3";
+  headingSizeBig = "80px"
+  headingSizeSmall = "40px"
+
+  zoom = true;
 }
