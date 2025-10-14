@@ -219,6 +219,12 @@ export class App {
   // }
 
   username = signal("Bhavesh");
+  count = signal(0);
+  displayHeading = false;
+
+  toggleValue(){
+    this.displayHeading = !this.displayHeading;
+  }
 
   constructor(){
     effect(() => {

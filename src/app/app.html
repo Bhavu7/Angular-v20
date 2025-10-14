@@ -169,5 +169,9 @@
 
 <h1>Effects</h1>
 
-<h3>{{username()}}</h3>
-<button (click)="username.set('Bhavesh Bhoi')">Update Username</button>
+<h3>{{ username() }}</h3>
+<button (click)="toggleValue()">Update Username</button>
+
+@if(displayHeading){
+<h1 style="background-color: greenyellow">Page Heading</h1>
+}
