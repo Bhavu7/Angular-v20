@@ -179,12 +179,24 @@
 
 <h1>For Loop Contextual Variables</h1>
 
-@for(user of users; track user; let i = $index; let l = $last; let f = $first;){ @if(f){
+@for(user of users; track user; let i = $index; let l = $last; let f = $first;){
+<!-- @if(f){
 <h2 style="color: green">this is our user {{ i + 1 }} : {{ user }}</h2>
 } @else if(l){
 <h2 style="color: red">this is our user {{ i + 1 }} : {{ user }}</h2>
 } @else {
 <h2>this is our user {{ i + 1 }} : {{ user }}</h2>
-}
+} -->
 <!-- <h3>{{$last}}</h3> -->
+
+@if($odd){
+<h2 style="color: red">this is our user {{ i }} : {{ user }}</h2>
+} @if($even) {
+<h2 style="color: green">this is our user {{ i }} : {{ user }}</h2>
+}
+<!-- <h2>this is our user {{ i + 1 }} : {{ user }}</h2> -->
+ <h1>{{$count}}</h1>
+}
+@empty {
+  <h1>No Record Found!</h1>
 }
