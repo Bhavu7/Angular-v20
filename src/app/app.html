@@ -167,7 +167,7 @@
 <button (click)="showValue()">Show</button>
 <button (click)="updateValue()">Update X</button> -->
 
-<h1>Effects</h1>
+<!-- <h1>Effects</h1>
 
 <h3>{{ username() }}</h3>
 <button (click)="toggleValue()">Update Username</button>
@@ -175,4 +175,10 @@
 <h3>{{ count() }}</h3>
 @if(displayHeading){
 <h1 style="background-color: greenyellow">Page Heading</h1>
+} -->
+
+<h1>For Loop Contextual Variables</h1>
+
+@for(user of users; track user){
+  <h2>{{user}}</h2>
 }

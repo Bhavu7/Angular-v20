@@ -218,26 +218,29 @@ export class App {
   //   console.log(this.z());
   // }
 
-  username = signal("Bhavesh");
-  count = signal(0);
-  displayHeading = false;
+  // username = signal("Bhavesh");
+  // count = signal(0);
+  // displayHeading = false;
 
-  constructor() {
-    effect(() => {
-      // console.log(this.username);
-      if (this.count() == 2) {
-        this.displayHeading = true;
-        setTimeout(()=>{
-        this.displayHeading = false;
-        },2000)
-      } else {
-        this.displayHeading = false;
-      }
-    })
-  }
+  // constructor() {
+  //   effect(() => {
+  //     // console.log(this.username);
+  //     if (this.count() == 2) {
+  //       this.displayHeading = true;
+  //       setTimeout(()=>{
+  //       this.displayHeading = false;
+  //       },2000)
+  //     } else {
+  //       this.displayHeading = false;
+  //     }
+  //   })
+  // }
 
-  toggleValue() {
-    // this.displayHeading = !this.displayHeading;
-    this.count.set(this.count() + 1);
-  }
+  // toggleValue() {
+  //   // this.displayHeading = !this.displayHeading;
+  //   this.count.set(this.count() + 1);
+  // }
+
+
+  users = ['Ajju', 'Dev', 'Harsh', 'Amit', 'Jeet', 'Divya', 'Het']
 }
