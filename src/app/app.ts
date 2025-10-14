@@ -2,10 +2,12 @@ import { Component, effect, signal, WritableSignal, Signal, computed } from '@an
 import { Login } from './login/login';
 import { Signup } from './signup/signup';
 import { Profile } from './profile/profile.component';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
   // imports: [Login, Signup, Profile],
+  imports: [FormsModule],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
@@ -242,6 +244,27 @@ export class App {
   // }
 
 
-  users = ['Ajju', 'Dev', 'Harsh', 'Amit', 'Jeet', 'Divya', 'Het']
+  // users = ['Ajju', 'Dev', 'Harsh', 'Amit', 'Jeet', 'Divya', 'Het']
   // users = [];
+
+
+  // name = "Bhavesh Bhoi"
+
+  // // Another Way of two way binding
+  // changeName(event: Event) {
+  //   const val = (event.target as HTMLInputElement).value;
+  //   this.name = val;
+  // }
+
+  task = "";
+  taskList: { id: number, task: string }[] = [];
+
+  addTask() {
+    this.taskList.push({ id: this.taskList.length + 1, task: this.task })
+    this.task = "";
+  }
+
+  deleteTask(taskId : number){
+    this.taskList = this.taskList.filter((item) => item.id !== taskId)
+  }
 }

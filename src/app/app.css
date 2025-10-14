@@ -105,3 +105,13 @@ input:focus{
   height: 100px;
   width: 100px;
 } */
+
+/* To Do List */
+
+ul{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+  padding: 10px;
+}
