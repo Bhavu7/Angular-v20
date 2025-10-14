@@ -217,4 +217,12 @@ export class App {
   //   this.x.set(100);
   //   console.log(this.z());
   // }
+
+  username = signal("Bhavesh");
+
+  constructor(){
+    effect(() => {
+      console.log(this.username);
+    })
+  }
 }
