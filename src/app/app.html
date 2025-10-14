@@ -211,12 +211,12 @@
 <h3>{{name}}</h3> -->
 
 
-<h1>To Do List</h1>
+<!-- <h1>To Do List</h1>
 
 <input [(ngModel)]="task" type="text" placeholder="Enter New Task">
 <button (click)="addTask()">Add Task</button>
 
-<!-- <p>{{task}}</p> -->
+<p>{{task}}</p>
 
 @for(task of taskList; track task){
   <ul>
@@ -226,4 +226,7 @@
       <button (click)="deleteTask(task.id)">Delete</button>
     </li>
   </ul>
-}
+} -->
+
+<!-- <h1 [style.backgroundColor]="bgColor" [style.fontSize]="fontSize">Dynamic Styling</h1> -->
+<h1 [style.backgroundColor]="bgColor" [style.fontSize.rem]="fontSize">Dynamic Styling</h1>

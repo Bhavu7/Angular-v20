@@ -256,15 +256,19 @@ export class App {
   //   this.name = val;
   // }
 
-  task = "";
-  taskList: { id: number, task: string }[] = [];
+  // task = "";
+  // taskList: { id: number, task: string }[] = [];
 
-  addTask() {
-    this.taskList.push({ id: this.taskList.length + 1, task: this.task })
-    this.task = "";
-  }
+  // addTask() {
+  //   this.taskList.push({ id: this.taskList.length + 1, task: this.task })
+  //   this.task = "";
+  // }
 
-  deleteTask(taskId : number){
-    this.taskList = this.taskList.filter((item) => item.id !== taskId)
-  }
+  // deleteTask(taskId : number){
+  //   this.taskList = this.taskList.filter((item) => item.id !== taskId)
+  // }
+
+  bgColor = "green";
+  // fontSize = "3rem";
+  fontSize = "3";
 }
