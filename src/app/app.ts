@@ -205,16 +205,16 @@ export class App {
   //   this.data.update((val) => val+1);
   // }
 
-  x = signal(10);
-  y = signal(20);
-  z = computed(() => this.x() + this.y());
+  // x = signal(10);
+  // y = signal(20);
+  // z = computed(() => this.x() + this.y());
 
-  showValue(){
-    console.log(this.z());
-  }
+  // showValue(){
+  //   console.log(this.z());
+  // }
 
-  updateValue(){
-    this.x.set(100);
-    console.log(this.z());
-  }
+  // updateValue(){
+  //   this.x.set(100);
+  //   console.log(this.z());
+  // }
 }
