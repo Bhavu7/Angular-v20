@@ -222,13 +222,22 @@ export class App {
   count = signal(0);
   displayHeading = false;
 
-  toggleValue(){
-    this.displayHeading = !this.displayHeading;
+  constructor() {
+    effect(() => {
+      // console.log(this.username);
+      if (this.count() == 2) {
+        this.displayHeading = true;
+        setTimeout(()=>{
+        this.displayHeading = false;
+        },2000)
+      } else {
+        this.displayHeading = false;
+      }
+    })
   }
 
-  constructor(){
-    effect(() => {
-      console.log(this.username);
-    })
+  toggleValue() {
+    // this.displayHeading = !this.displayHeading;
+    this.count.set(this.count() + 1);
   }
 }
