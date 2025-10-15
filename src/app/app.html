@@ -247,9 +247,9 @@
 
 <ul>
   <li *ngFor="let students of studentsData">
-    <ul>
-      <li>{{students.name}}</li><br>
-      <li>{{students.age}}</li><br>
+    <ul style="display: flex; flex-direction: column;">
+      <li>{{students.name}}</li>
+      <li>{{students.age}}</li>
       <li>{{students.prof}}</li>
     </ul>
   </li>
