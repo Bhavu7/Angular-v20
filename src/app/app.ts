@@ -3,12 +3,12 @@ import { Login } from './login/login';
 import { Signup } from './signup/signup';
 import { Profile } from './profile/profile.component';
 import { FormsModule } from '@angular/forms';
-import { NgIf } from '@angular/common';
+import { NgFor, NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-root',
   // imports: [Login, Signup, Profile],
-  imports: [NgIf],
+  imports: [NgIf, NgFor],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
@@ -281,5 +281,26 @@ export class App {
   //   this.zoom = !this.zoom;
   // }
 
-  show = true;
+  // show = true;
+  // students = ['Ajju', 'Dev', 'Harsh', 'Amit', 'Jeet', 'Divya', 'Het']
+  studentsData = [{
+    name: 'Bhavu',
+    age: 21,
+    prof: 'developer'
+  },
+  {
+    name: 'Bhavu',
+    age: 21,
+    prof: 'developer'
+  },
+  {
+    name: 'Bhavu',
+    age: 21,
+    prof: 'developer'
+  },
+  {
+    name: 'Bhavu',
+    age: 21,
+    prof: 'developer'
+  }]
 }
