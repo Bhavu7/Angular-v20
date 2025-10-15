@@ -3,11 +3,12 @@ import { Login } from './login/login';
 import { Signup } from './signup/signup';
 import { Profile } from './profile/profile.component';
 import { FormsModule } from '@angular/forms';
+import { NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-root',
   // imports: [Login, Signup, Profile],
-  imports: [FormsModule],
+  imports: [NgIf],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
@@ -268,15 +269,17 @@ export class App {
   //   this.taskList = this.taskList.filter((item) => item.id !== taskId)
   // }
 
-  bgColor = "green";
-  // fontSize = "3rem";
-  fontSize = "3";
-  headingSizeBig = "80px"
-  headingSizeSmall = "40px"
+  // bgColor = "green";
+  // // fontSize = "3rem";
+  // fontSize = "3";
+  // headingSizeBig = "80px"
+  // headingSizeSmall = "40px"
 
-  zoom = true;
+  // zoom = true;
 
-  updateHeading(){
-    this.zoom = !this.zoom;
-  }
+  // updateHeading(){
+  //   this.zoom = !this.zoom;
+  // }
+
+  show = false;
 }
