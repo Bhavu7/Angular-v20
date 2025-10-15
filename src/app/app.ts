@@ -281,5 +281,5 @@ export class App {
   //   this.zoom = !this.zoom;
   // }
 
-  show = false;
+  show = true;
 }
