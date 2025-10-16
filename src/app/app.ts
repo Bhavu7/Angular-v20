@@ -4,11 +4,13 @@ import { Signup } from './signup/signup';
 import { Profile } from './profile/profile.component';
 import { FormsModule } from '@angular/forms';
 import { NgFor, NgIf, NgSwitch, NgSwitchCase, NgSwitchDefault } from '@angular/common';
+import { RouterLink, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
   // imports: [Login, Signup, Profile],
-  imports: [NgIf, NgFor, NgSwitch, NgSwitchCase, NgSwitchDefault],
+  // imports: [NgIf, NgFor, NgSwitch, NgSwitchCase, NgSwitchDefault],
+  imports: [RouterLink, RouterOutlet],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
@@ -304,9 +306,9 @@ export class App {
   //   prof: 'developer'
   // }]
 
-  color = 'black'
+  // color = 'black'
 
-  changeColor(color : string){
-    this.color = color;
-  }
+  // changeColor(color : string){
+  //   this.color = color;
+  // }
 }
