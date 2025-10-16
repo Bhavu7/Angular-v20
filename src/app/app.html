@@ -210,7 +210,6 @@
 <input (input)="changeName($event)" type="text" placeholder="Enter name">
 <h3>{{name}}</h3> -->
 
-
 <!-- <h1>To Do List</h1>
 
 <input [(ngModel)]="task" type="text" placeholder="Enter New Task">
@@ -234,18 +233,16 @@
 <h1 [style.fontSize]="zoom ? headingSizeBig : headingSizeSmall">Heading</h1>
 <button (click)="updateHeading()">Update Heading</button> -->
 
-
 <!-- <h1>Directives in Angular</h1>
 
 <h3 *ngIf="show">Heading Tag</h3> -->
-<h1>ngFor Directive in Angular</h1>
+<!-- <h1>ngFor Directive in Angular</h1> -->
 
 <!-- <ul>
   <li *ngFor="let student of students">{{student}}</li>
 </ul> -->
 
-
-<ul>
+<!-- <ul>
   <li *ngFor="let students of studentsData">
     <ul style="display: flex; flex-direction: column;">
       <li>{{students.name}}</li>
@@ -253,4 +250,20 @@
       <li>{{students.prof}}</li>
     </ul>
   </li>
-</ul>
+</ul> -->
+
+<h1>NgSwitch Directives in Angular</h1>
+
+<div [ngSwitch]="color">
+  <h3 *ngSwitchCase="'red'" style="color: red">Red Color</h3>
+  <h3 *ngSwitchCase="'green'" style="color: green">Green Color</h3>
+  <h3 *ngSwitchCase="'blue'" style="color: blue">Blue Color</h3>
+  <h3 *ngSwitchCase="'yellowgreen'" style="color: yellowgreen">Yellowgreen Color</h3>
+  <h3 *ngSwitchCase="'purple'" style="color: purple">Purple Color</h3>
+</div>
+
+<button (click)="changeColor('red')">Red</button>
+<button (click)="changeColor('green')">Green</button>
+<button (click)="changeColor('blue')">Blue</button>
+<button (click)="changeColor('yellowgreen')">Yellowgreen</button>
+<button (click)="changeColor('purple')">Purple</button>

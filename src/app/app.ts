@@ -3,12 +3,12 @@ import { Login } from './login/login';
 import { Signup } from './signup/signup';
 import { Profile } from './profile/profile.component';
 import { FormsModule } from '@angular/forms';
-import { NgFor, NgIf } from '@angular/common';
+import { NgFor, NgIf, NgSwitch, NgSwitchCase } from '@angular/common';
 
 @Component({
   selector: 'app-root',
   // imports: [Login, Signup, Profile],
-  imports: [NgIf, NgFor],
+  imports: [NgIf, NgFor, NgSwitch, NgSwitchCase],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
@@ -283,24 +283,30 @@ export class App {
 
   // show = true;
   // students = ['Ajju', 'Dev', 'Harsh', 'Amit', 'Jeet', 'Divya', 'Het']
-  studentsData = [{
-    name: 'Bhavu',
-    age: 21,
-    prof: 'developer'
-  },
-  {
-    name: 'Bhavu',
-    age: 21,
-    prof: 'developer'
-  },
-  {
-    name: 'Bhavu',
-    age: 21,
-    prof: 'developer'
-  },
-  {
-    name: 'Bhavu',
-    age: 21,
-    prof: 'developer'
-  }]
+  // studentsData = [{
+  //   name: 'Bhavu',
+  //   age: 21,
+  //   prof: 'developer'
+  // },
+  // {
+  //   name: 'Bhavu',
+  //   age: 21,
+  //   prof: 'developer'
+  // },
+  // {
+  //   name: 'Bhavu',
+  //   age: 21,
+  //   prof: 'developer'
+  // },
+  // {
+  //   name: 'Bhavu',
+  //   age: 21,
+  //   prof: 'developer'
+  // }]
+
+  color = 'red'
+
+  changeColor(color : string){
+    this.color = color;
+  }
 }
