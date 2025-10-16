@@ -9,11 +9,11 @@ import { ActivatedRoute } from "@angular/router";
 
 export class Profile{
 
-  username:string|null = '';
+  userName:string|null = '';
 
   constructor(private route:ActivatedRoute){}
   ngOnInit():void{
-    this.username = this.route.snapshot.paramMap.get('name');
-    console.log(this.username);
+    this.userName = this.route.snapshot.paramMap.get('name');
+    console.log(this.userName);
   }
 }
