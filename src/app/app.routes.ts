@@ -25,7 +25,10 @@ export const routes: Routes = [
   },
   {
     path: 'profile',
-    component: Profile
+    component: Profile,
+    data:{
+      name:'Bhavu Bhoi'
+    }
   },
   {
     path: '**',

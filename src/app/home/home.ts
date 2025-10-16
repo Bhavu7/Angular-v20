@@ -13,9 +13,9 @@ export class Home {
 
   }
 
-  navigateToProfile(name:string){
-    // this.router.navigate(['profile'],{queryParams:{name:'Bhavesh Bhoi'}});
-    // this.router.navigate(['profile'],{queryParams:{name:name}});
-    this.router.navigate(['profile'],{queryParams:{name}});
-  }
+  // navigateToProfile(name:string){
+  //   // this.router.navigate(['profile'],{queryParams:{name:'Bhavesh Bhoi'}});
+  //   // this.router.navigate(['profile'],{queryParams:{name:name}});
+  //   this.router.navigate(['profile'],{queryParams:{name}});
+  // }
 }

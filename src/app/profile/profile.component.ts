@@ -16,8 +16,12 @@ export class Profile{
     // this.userName = this.route.snapshot.paramMap.get('name');
     // console.log(this.userName);
 
-    this.route.queryParams.subscribe(params => {
-      this.userName = params['name'];
+    // this.route.queryParams.subscribe(params => {
+    //   this.userName = params['name'];
+    // })
+    this.route.data.subscribe(data=>{
+      this.userName = data['name'];
+
     })
   }
 }
