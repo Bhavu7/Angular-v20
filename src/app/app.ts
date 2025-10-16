@@ -5,12 +5,13 @@ import { Profile } from './profile/profile.component';
 import { FormsModule } from '@angular/forms';
 import { NgFor, NgIf, NgSwitch, NgSwitchCase, NgSwitchDefault } from '@angular/common';
 import { RouterLink, RouterOutlet } from '@angular/router';
+import { Header } from "./header/header";
 
 @Component({
   selector: 'app-root',
   // imports: [Login, Signup, Profile],
   // imports: [NgIf, NgFor, NgSwitch, NgSwitchCase, NgSwitchDefault],
-  imports: [RouterLink, RouterOutlet],
+  imports: [ RouterOutlet, Header],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
