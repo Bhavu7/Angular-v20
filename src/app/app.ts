@@ -2,7 +2,7 @@ import { Component, effect, signal, WritableSignal, Signal, computed } from '@an
 import { Login } from './login/login';
 import { Signup } from './signup/signup';
 import { Profile } from './profile/profile.component';
-import { FormControl, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { NgFor, NgIf, NgSwitch, NgSwitchCase, NgSwitchDefault } from '@angular/common';
 import { RouterLink, RouterOutlet } from '@angular/router';
 import { Header } from "./header/header";
@@ -11,7 +11,7 @@ import { Header } from "./header/header";
   selector: 'app-root',
   // imports: [Login, Signup, Profile],
   // imports: [NgIf, NgFor, NgSwitch, NgSwitchCase, NgSwitchDefault],
-  imports: [ RouterOutlet, Header, ReactiveFormsModule],
+  imports: [RouterOutlet, Header, ReactiveFormsModule, NgIf],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
@@ -326,20 +326,32 @@ export class App {
   // }
 
   loginForm = new FormGroup({
-    name: new FormControl('Bhavesh Bhoi'),
-    password: new FormControl('Bhavu07'),
-    email: new FormControl('bhavu@test.com')
+    name: new FormControl('', [Validators.required]),
+    password: new FormControl('', [Validators.required, Validators.minLength(8)]),
+    email: new FormControl('', [Validators.required, Validators.maxLength(30)])
   });
 
-  onSubmit(){
-    console.log(this.loginForm.value.email);
+  onSubmit() {
+    console.log(this.loginForm.value);
   }
 
-  setValue(){
-    this.loginForm.setValue({
-      name: 'Bhavu',
-      password: '12345',
-      email: 'bhavu@test.com'
-    })
+  get name() {
+    return this.loginForm.get('name');
   }
+
+  get email() {
+    return this.loginForm.get('email');
+  }
+
+  get password() {
+    return this.loginForm.get('password');
+  }
+
+  // setValue(){
+  //   this.loginForm.setValue({
+  //     name: 'Bhavu',
+  //     password: '12345',
+  //     email: 'bhavu@test.com'
+  //   })
+  // }
 }

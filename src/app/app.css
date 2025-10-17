@@ -108,10 +108,14 @@ input:focus{
 
 /* To Do List */
 
-ul{
+ul {
   display: flex;
   align-items: center;
   justify-content: space-between;
   list-style: none;
   padding: 10px;
+}
+
+.error {
+  color: red;
 }
