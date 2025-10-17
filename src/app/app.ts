@@ -2,7 +2,7 @@ import { Component, effect, signal, WritableSignal, Signal, computed } from '@an
 import { Login } from './login/login';
 import { Signup } from './signup/signup';
 import { Profile } from './profile/profile.component';
-import { FormsModule } from '@angular/forms';
+import { FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgFor, NgIf, NgSwitch, NgSwitchCase, NgSwitchDefault } from '@angular/common';
 import { RouterLink, RouterOutlet } from '@angular/router';
 import { Header } from "./header/header";
@@ -11,7 +11,7 @@ import { Header } from "./header/header";
   selector: 'app-root',
   // imports: [Login, Signup, Profile],
   // imports: [NgIf, NgFor, NgSwitch, NgSwitchCase, NgSwitchDefault],
-  imports: [ RouterOutlet, Header],
+  imports: [ RouterOutlet, Header, ReactiveFormsModule],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
@@ -312,4 +312,16 @@ export class App {
   // changeColor(color : string){
   //   this.color = color;
   // }
+
+  name = new FormControl('bhavesh');
+  password = new FormControl('12345');
+
+  displayValue(){
+    console.log(this.name.value, this.password.value);
+  }
+
+  setValues(){
+    this.name.setValue('Bhavesh Bhoi');
+    this.password.setValue('123456');
+  }
 }

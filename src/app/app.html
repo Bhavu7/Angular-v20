@@ -273,3 +273,20 @@
 <!-- <h1>Routing in Angular</h1> -->
 
 <router-outlet />
+
+<h1>Basic React Forms</h1>
+
+<!-- <form action="" method="POST"> -->
+  <label for="name">Enter Name : </label>
+  <input type="text" [formControl]="name" placeholder="Enter Your Name">
+  <br>
+  <label for="pwd">Enter Password :</label>
+  <input type="password" [formControl]="password" name="password" id="pwd" placeholder="Enter Password">
+  <br>
+  <br>
+  <hr>
+  <button type="submit" (click)="displayValue()">Login</button>
+  <button type="submit" (click)="setValues()">Set Value</button>
+  <!-- <h3>{{name.value}}</h3>
+  <h3>{{password.value}}</h3> -->
+<!-- </form> -->
