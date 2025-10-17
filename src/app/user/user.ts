@@ -1,3 +1,5 @@
+import { ActivatedRoute } from '@angular/router';
+import { routes } from './../app.routes';
 import { Component } from '@angular/core';
 
 @Component({
@@ -7,5 +9,14 @@ import { Component } from '@angular/core';
   styleUrl: './user.css'
 })
 export class User {
+  name : null|string = "";
+  constructor(private route:ActivatedRoute){
 
+  }
+  ngOnInit(){
+    this.route.params.subscribe((params) => {
+      // console.log(params);
+      this.name = params['name'];
+    })
+  }
 }

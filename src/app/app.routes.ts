@@ -5,6 +5,7 @@ import { Contact } from './contact/contact';
 import { Home } from './home/home';
 import { PageNotFound } from './page-not-found/page-not-found';
 import { Profile } from './profile/profile.component';
+import { User } from './user/user';
 
 export const routes: Routes = [
   {
@@ -29,6 +30,10 @@ export const routes: Routes = [
     data:{
       name:'Bhavu Bhoi'
     }
+  },
+  {
+    path: 'user/:id/:name/:age/:email',
+    component: User
   },
   {
     path: '**',
