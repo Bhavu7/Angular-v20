@@ -274,9 +274,9 @@
 
 <router-outlet />
 
-<h1>Basic React Forms</h1>
+<!-- <h1>Basic React Forms</h1>
 
-<!-- <form action="" method="POST"> -->
+<form action="" method="POST">
   <label for="name">Enter Name : </label>
   <input type="text" [formControl]="name" placeholder="Enter Your Name">
   <br>
@@ -287,6 +287,19 @@
   <hr>
   <button type="submit" (click)="displayValue()">Login</button>
   <button type="submit" (click)="setValues()">Set Value</button>
-  <!-- <h3>{{name.value}}</h3>
-  <h3>{{password.value}}</h3> -->
-<!-- </form> -->
+  <h3>{{name.value}}</h3>
+  <h3>{{password.value}}</h3>
+</form> -->
+
+<h1>Form Grouping in Angular</h1>
+
+<form action="" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+  <input type="text" placeholder="Enter Name" formControlName="name">
+  <br><br>
+  <input type="password" placeholder="Enter Passsword" formControlName="password">
+  <br><br>
+  <input type="email" placeholder="Enter Email" formControlName="email">
+  <br><br>
+  <button type="submit">Submit</button>
+  <button type="button" (click)="setValue()">Set Value</button>
+</form>

@@ -2,7 +2,7 @@ import { Component, effect, signal, WritableSignal, Signal, computed } from '@an
 import { Login } from './login/login';
 import { Signup } from './signup/signup';
 import { Profile } from './profile/profile.component';
-import { FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormControl, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgFor, NgIf, NgSwitch, NgSwitchCase, NgSwitchDefault } from '@angular/common';
 import { RouterLink, RouterOutlet } from '@angular/router';
 import { Header } from "./header/header";
@@ -313,15 +313,33 @@ export class App {
   //   this.color = color;
   // }
 
-  name = new FormControl('bhavesh');
-  password = new FormControl('12345');
+  // name = new FormControl('bhavesh');
+  // password = new FormControl('12345');
 
-  displayValue(){
-    console.log(this.name.value, this.password.value);
+  // displayValue(){
+  //   console.log(this.name.value, this.password.value);
+  // }
+
+  // setValues(){
+  //   this.name.setValue('Bhavesh Bhoi');
+  //   this.password.setValue('123456');
+  // }
+
+  loginForm = new FormGroup({
+    name: new FormControl('Bhavesh Bhoi'),
+    password: new FormControl('Bhavu07'),
+    email: new FormControl('bhavu@test.com')
+  });
+
+  onSubmit(){
+    console.log(this.loginForm.value);
   }
 
-  setValues(){
-    this.name.setValue('Bhavesh Bhoi');
-    this.password.setValue('123456');
+  setValue(){
+    this.loginForm.setValue({
+      name: 'Bhavu',
+      password: '12345',
+      email: 'bhavu@test.com'
+    })
   }
 }
