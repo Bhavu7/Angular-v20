@@ -4,4 +4,23 @@
 <!-- <button (click)="navigateToProfile('Bhavesh Bhoi')">Go To Profile Page</button>
 <button (click)="navigateToProfile('User1')">Go To Profile Page</button>
 <button (click)="navigateToProfile('User2')">Go To Profile Page</button> -->
-<a routerLink="profile">Go To Profile Page</a>
+<!-- <a routerLink="profile">Go To Profile Page</a> -->
+
+<h1>Users</h1>
+
+@for(user of users; track user.id){
+<ul>
+  <!-- <li>
+    <a routerLink="user">{{ user.id }}</a>
+  </li> -->
+  <li>
+    <a routerLink="user">{{ user.name }}</a>
+  </li>
+  <!-- <li>
+    <a routerLink="user">{{ user.age }}</a>
+  </li>
+  <li>
+    <a routerLink="user">{{ user.email }}</a>
+  </li> -->
+</ul>
+}
