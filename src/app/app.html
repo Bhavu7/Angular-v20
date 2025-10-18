@@ -291,7 +291,7 @@
   <h3>{{password.value}}</h3>
 </form> -->
 
-<h1>Form Grouping in Angular</h1>
+<!-- <h1>Form Grouping in Angular</h1>
 
 <form action="" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
   <input type="text" placeholder="Enter Name" formControlName="name" />
@@ -313,9 +313,34 @@
   >
   <br /><br />
   <button type="submit">Submit</button>
-  <!-- <button type="button" (click)="setValue()">Set Value</button> -->
-</form>
+  <button type="button" (click)="setValue()">Set Value</button>
+</form> -->
 
 <!-- <h3>{{this.loginForm.value.name}}</h3>
 <h3>{{this.loginForm.value.password}}</h3>
 <h3>{{this.loginForm.value.email}}</h3> -->
+
+<h1>Template Driven Forms</h1>
+<br /><br />
+
+<form #userForm="ngForm" (ngSubmit)="addDetails(userForm.value)">
+  <input type="text" name="name" placeholder="Enter Name" ngModel/>
+  <br /><br />
+  <input type="password" name="password" placeholder="Enter Password" ngModel/>
+  <br /><br />
+  <select name="gender" id="gender" title="gender" ngModel>
+    <option value="" disabled selected>Select Option</option>
+    <option value="male">Male</option>
+    <option value="female">Female</option>
+  </select>
+  <br /><br />
+  <input type="range" name="range" id="range" title="Range" min="0" max="20" ngModel/>
+  <br /><br />
+  <button>Add User</button>
+</form>
+
+<br><br>
+<h3>{{userDetails.name}}</h3>
+<h3>{{userDetails.password}}</h3>
+<h3>{{userDetails.gender}}</h3>
+<h3>{{userDetails.range}}</h3>
