@@ -320,7 +320,7 @@
 <h3>{{this.loginForm.value.password}}</h3>
 <h3>{{this.loginForm.value.email}}</h3> -->
 
-<h1>Template Driven Forms</h1>
+<!-- <h1>Template Driven Forms</h1>
 <br /><br />
 
 <form #userForm="ngForm" (ngSubmit)="addDetails(userForm.value)">
@@ -340,7 +340,18 @@
 </form>
 
 <br><br>
-<h3>{{userDetails.name}}</h3>
-<h3>{{userDetails.password}}</h3>
-<h3>{{userDetails.gender}}</h3>
-<h3>{{userDetails.range}}</h3>
+<h3>{{userDetails?.name}}</h3>
+<h3>{{userDetails?.password}}</h3>
+<h3>{{userDetails?.gender}}</h3>
+<h3>{{userDetails?.range}}</h3> -->
+
+<h1>Pass Data To Child Component</h1>
+
+<app-user [user]="userName" city="Vadodara"/>
+
+<select #selectedUser (change)="onUserChange(selectedUser.value)" title="options">
+  <option value="Bhavu">Bhavu</option>
+  <option value="Harsh">Harsh</option>
+  <option value="Dev">Dev</option>
+  <option value="Meet">Meet</option>
+</select>

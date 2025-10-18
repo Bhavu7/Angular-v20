@@ -6,12 +6,13 @@ import { FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators, N
 import { NgFor, NgIf, NgSwitch, NgSwitchCase, NgSwitchDefault } from '@angular/common';
 import { RouterLink, RouterOutlet } from '@angular/router';
 import { Header } from "./header/header";
+import { User } from './user/user';
 
 @Component({
   selector: 'app-root',
   // imports: [Login, Signup, Profile],
   // imports: [NgIf, NgFor, NgSwitch, NgSwitchCase, NgSwitchDefault],
-  imports: [RouterOutlet, Header, ReactiveFormsModule, NgIf,FormsModule],
+  imports: [RouterOutlet, Header, ReactiveFormsModule, NgIf, FormsModule, User],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
@@ -355,10 +356,16 @@ export class App {
   //   })
   // }
 
-  userDetails:any = {};
+  // userDetails:any = {};
 
-  addDetails(val:NgForm){
-    // console.log(val);
-    this.userDetails = val;
+  // addDetails(val:NgForm){
+  //   // console.log(val);
+  //   this.userDetails = val;
+  // }
+
+  userName = 'Bhavu'
+
+  onUserChange(user: string) {
+    this.userName = user;
   }
 }

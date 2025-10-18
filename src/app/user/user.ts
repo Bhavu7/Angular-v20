@@ -1,6 +1,6 @@
 import { ActivatedRoute } from '@angular/router';
 import { routes } from './../app.routes';
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-user',
@@ -9,14 +9,17 @@ import { Component } from '@angular/core';
   styleUrl: './user.css'
 })
 export class User {
-  name : null|string = "";
-  constructor(private route:ActivatedRoute){
+  // name : null|string = "";
+  // constructor(private route:ActivatedRoute){
 
-  }
-  ngOnInit(){
-    this.route.params.subscribe((params) => {
-      // console.log(params);
-      this.name = params['name'];
-    })
-  }
+  // }
+  // ngOnInit(){
+  //   this.route.params.subscribe((params) => {
+  //     // console.log(params);
+  //     this.name = params['name'];
+  //   })
+  // }
+
+  @Input() user:string='';
+  @Input() city:string='';
 }
