@@ -21,5 +21,5 @@ export class User {
   // }
 
   @Input() user:string='';
-  @Input() city:string='';
+  // @Input() city:string='';
 }

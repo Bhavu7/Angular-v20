@@ -345,7 +345,7 @@
 <h3>{{userDetails?.gender}}</h3>
 <h3>{{userDetails?.range}}</h3> -->
 
-<h1>Pass Data To Child Component</h1>
+<!-- <h1>Pass Data To Child Component</h1>
 
 <app-user [user]="userName" city="Vadodara"/>
 
@@ -354,4 +354,13 @@
   <option value="Harsh">Harsh</option>
   <option value="Dev">Dev</option>
   <option value="Meet">Meet</option>
-</select>
+</select> -->
+
+<h1>Reuse Component</h1>
+
+@for(user of users; track user){
+  <div>
+    <!-- {{user}} -->
+    <app-user [user]="user"/>
+  </div>
+}

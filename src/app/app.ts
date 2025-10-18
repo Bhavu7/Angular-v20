@@ -363,9 +363,11 @@ export class App {
   //   this.userDetails = val;
   // }
 
-  userName = 'Bhavu'
+  // userName = 'Bhavu'
 
-  onUserChange(user: string) {
-    this.userName = user;
-  }
+  // onUserChange(user: string) {
+  //   this.userName = user;
+  // }
+
+  users = ['Bhavu', 'Dev', 'Harsh', 'Amit', 'Sujit', 'Het'];
 }
