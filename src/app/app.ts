@@ -369,5 +369,12 @@ export class App {
   //   this.userName = user;
   // }
 
-  users = ['Bhavu', 'Dev', 'Harsh', 'Amit', 'Sujit', 'Het'];
+  // users = ['Bhavu', 'Dev', 'Harsh', 'Amit', 'Sujit', 'Het'];
+
+  users: undefined | string;
+
+  handleUsers(users: string) {
+    console.log(users);
+    this.users = users;
+  }
 }

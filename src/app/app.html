@@ -356,11 +356,18 @@
   <option value="Meet">Meet</option>
 </select> -->
 
-<h1>Reuse Component</h1>
+<!-- <h1>Reuse Component</h1>
 
 @for(user of users; track user){
   <div>
-    <!-- {{user}} -->
+    {{user}}
     <app-user [user]="user"/>
   </div>
+} -->
+
+<h1>Pass Data from Child Component to Parent Component</h1>
+
+<app-user (getUsers)="handleUsers($event)" />
+@for(user of users; track user){
+  <h1>{{user}}</h1>
 }

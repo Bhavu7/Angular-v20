@@ -1,6 +1,6 @@
 import { ActivatedRoute } from '@angular/router';
 import { routes } from './../app.routes';
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output, output } from '@angular/core';
 
 @Component({
   selector: 'app-user',
@@ -20,6 +20,16 @@ export class User {
   //   })
   // }
 
-  @Input() user:string='';
+  // @Input() user:string='';
   // @Input() city:string='';
+  @Output() getUsers = new EventEmitter();
+  users = ['Bhavu', 'Dev', 'Harsh', 'Amit', 'Sujit', 'Het'];
+
+  // ngOnInit() {
+  //   this.getUsers.emit(this.users);
+  // }
+
+    viewUsers() {
+    this.getUsers.emit(this.users);
+  }
 }
