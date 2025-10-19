@@ -364,10 +364,31 @@
     <app-user [user]="user"/>
   </div>
 } -->
-
+<!--
 <h1>Pass Data from Child Component to Parent Component</h1>
 
 <app-user (getUsers)="handleUsers($event)" />
 @for(user of users; track user){
   <h1>{{user}}</h1>
-}
+} -->
+
+
+<h1>Pipes in Amgular!</h1>
+
+<h3>{{title | uppercase}}</h3>
+<h3>{{title | lowercase}}</h3>
+<h3>{{name | titlecase}}</h3>
+
+<h2>Date : {{date | date}}</h2>
+<h2>Full Date : {{date | date:'fullDate'}}</h2>
+<h2>Time(Hour) : {{date | date:'hh'}}</h2>
+<h2>Time(Hour-Minute) : {{date | date:'hh:mm'}}</h2>
+<h2>Time(Hour-Minute-Second) : {{date | date:'hh:mm:ss'}}</h2>
+
+
+<h2>{{amount | currency}}</h2>
+<h2>{{amount | currency:'INR'}}</h2>
+<h2>{{amount | currency:'EUR'}}</h2>
+
+
+<h2>Full Date : {{date | date:'fullDate' | uppercase}}</h2>

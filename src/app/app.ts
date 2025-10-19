@@ -3,7 +3,7 @@ import { Login } from './login/login';
 import { Signup } from './signup/signup';
 import { Profile } from './profile/profile.component';
 import { FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators, NgForm } from '@angular/forms';
-import { NgFor, NgIf, NgSwitch, NgSwitchCase, NgSwitchDefault } from '@angular/common';
+import { CommonModule, NgFor, NgIf, NgSwitch, NgSwitchCase, NgSwitchDefault } from '@angular/common';
 import { RouterLink, RouterOutlet } from '@angular/router';
 import { Header } from "./header/header";
 import { User } from './user/user';
@@ -12,7 +12,7 @@ import { User } from './user/user';
   selector: 'app-root',
   // imports: [Login, Signup, Profile],
   // imports: [NgIf, NgFor, NgSwitch, NgSwitchCase, NgSwitchDefault],
-  imports: [RouterOutlet, Header, ReactiveFormsModule, NgIf, FormsModule, User],
+  imports: [RouterOutlet, Header, ReactiveFormsModule, NgIf, FormsModule, User, CommonModule],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
@@ -371,10 +371,15 @@ export class App {
 
   // users = ['Bhavu', 'Dev', 'Harsh', 'Amit', 'Sujit', 'Het'];
 
-  users: undefined | string;
+  // users: undefined | string;
 
-  handleUsers(users: string) {
-    console.log(users);
-    this.users = users;
-  }
+  // handleUsers(users: string) {
+  //   console.log(users);
+  //   this.users = users;
+  // }
+
+  title = 'angular demo';
+  name = 'Bhavu';
+  date = new Date();
+  amount = 10;
 }

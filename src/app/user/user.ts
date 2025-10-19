@@ -22,14 +22,14 @@ export class User {
 
   // @Input() user:string='';
   // @Input() city:string='';
-  @Output() getUsers = new EventEmitter();
-  users = ['Bhavu', 'Dev', 'Harsh', 'Amit', 'Sujit', 'Het'];
+  // @Output() getUsers = new EventEmitter();
+  // users = ['Bhavu', 'Dev', 'Harsh', 'Amit', 'Sujit', 'Het'];
 
-  // ngOnInit() {
+  // // ngOnInit() {
+  // //   this.getUsers.emit(this.users);
+  // // }
+
+  //   viewUsers() {
   //   this.getUsers.emit(this.users);
   // }
-
-    viewUsers() {
-    this.getUsers.emit(this.users);
-  }
 }
