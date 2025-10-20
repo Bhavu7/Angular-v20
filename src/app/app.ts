@@ -7,12 +7,13 @@ import { CommonModule, NgFor, NgIf, NgSwitch, NgSwitchCase, NgSwitchDefault } fr
 import { RouterLink, RouterOutlet } from '@angular/router';
 import { Header } from "./header/header";
 import { User } from './user/user';
+import { CurrencyConverterPipe } from './pipes/currency-converter-pipe';
 
 @Component({
   selector: 'app-root',
   // imports: [Login, Signup, Profile],
   // imports: [NgIf, NgFor, NgSwitch, NgSwitchCase, NgSwitchDefault],
-  imports: [RouterOutlet, Header, ReactiveFormsModule, NgIf, FormsModule, User, CommonModule],
+  imports: [RouterOutlet, Header, ReactiveFormsModule, NgIf, FormsModule, User, CommonModule, CurrencyConverterPipe],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
